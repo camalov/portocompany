@@ -1,9 +1,0 @@
-user table
-
-user_id
-user_time
-user_name
-user_password
-user_namelastname
-user_authority
-user_stautus
