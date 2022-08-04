@@ -1,0 +1,14 @@
+rewriteEngine on
+
+ErrorDocument 404 http://localhost/oyrenirem/layihelerim/portofirma/404
+
+RewriteRule ^https://localhost/oyrenirem/layihelerim/portofirma/$ http://localhost/oyrenirem/layihelerim/portofirma/ [L,QSA]
+RewriteRule ^404$ 404.php [NC,L]
+RewriteRule ^about-us$ about-us.php [NC,L]
+RewriteRule ^news$ news.php [NC,L]
+RewriteRule ^news-([0-9]+)$ news?page=$1 [NC,L]
+RewriteRule ^contact-us$ contact-us.php [NC,L]
+RewriteRule ^homepage$ index.php [NC,L]
+
+RewriteRule ^news-([0-9A-Za-z-_]+)-([0-9]+)$ news-detail.php?news_name=$1&news_id=$2 [L,QSA]
+RewriteRule ^menu-([0-9A-Za-z-_]+)-([0-9]+)$ menu-detail.php?menu_name=$1&menu_id=$2 [L,QSA]
